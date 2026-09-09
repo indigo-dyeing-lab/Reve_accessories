@@ -42,40 +42,6 @@ body {
   background-color: #eee3db;
 }
 
-body::before {
-  position: fixed;
-  z-index: 100;
-  top: -20vh;
-  right: -35vw;
-  width: 85vw;
-  height: 70vh;
-  pointer-events: none;
-  content: "";
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0) 75%);
-  border-radius: 50%;
-  backdrop-filter: blur(5px);
-  animation: fog-sweep 2.4s ease-in-out forwards;
-}
-
-@keyframes fog-sweep {
-  from {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate(-130vw, 125vh);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body::before {
-    animation: none;
-    opacity: 0;
-  }
-}
-
 img {
   display: block;
   width: 100%;
